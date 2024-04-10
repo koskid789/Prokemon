@@ -6,7 +6,7 @@ import controlP5.*;
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
 //For special moves, first row is attack, second is defence, third is spec-attack, fourth is spec-defence, fifth is speed
-//sixth is up(0)/down(1), seventh is self(0)/opponent(1)
+//sixth is up(0)/down(1), seventh is self(0)/opponent(1), eighth is strength of change (1 being one stage, 2 being 2 stages, etc.)
 Table moves;
 Table specialMoves;
 
