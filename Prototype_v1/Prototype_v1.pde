@@ -83,6 +83,12 @@ class Move {
     int[] info;
     boolean specialMove = false;
     int[] specialInfo;
+    boolean buff = false;
+    boolean attack = false;
+    boolean defence = false;
+    boolean sAttack = false;
+    boolean sDefence = false;
+    boolean speed = false;
 
     Move() {
         specialInfo = new int[8]; 
