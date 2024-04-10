@@ -63,7 +63,7 @@ class Move {
 
 int[] getMoveInfo(String name) {
     int count = 0;
-    int[] output = new int[7];
+    int[] output = new int[8];
     while (count < moves.getRowCount()) {
         if (name.equals(moves.getString(count, 0)) == true) {
             output[0] = moves.getInt(count, 1);
@@ -73,8 +73,15 @@ int[] getMoveInfo(String name) {
             output[4] = moves.getInt(count, 5);
             output[5] = moves.getInt(count, 6);
             output[6] = moves.getInt(count, 7);
+            output[7] = moves.getInt(count, 8);
         }
         count++;
     }
     return output;
+}
+
+void keyPressed() {
+    if (key == 'l') {
+        exit();
+    }
 }
