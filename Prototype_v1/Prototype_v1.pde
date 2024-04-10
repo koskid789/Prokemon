@@ -9,7 +9,7 @@ Table moves;
 
 //Creates the 3 pokemon
 Pokemon charizard;
-Pokemon squirtle;
+Pokemon blastoise;
 Pokemon venusaur;
 
 void setup() {
@@ -27,6 +27,12 @@ void setup() {
     venusaur.assignMove("Tackle", 1);
     venusaur.assignMove("Growl", 1);
     venusaur.assignMove("Vine_Whip", 1);
+
+    blastoise = new Pokemon("Water");
+    blastoise.assignMove("Tackle", 1);
+    blastoise.assignMove("Tail_Whip", 1);
+    blastoise.assignMove("Bubble", 1);
+    blastoise.assignMove("Water_Gun", 1);
 }
 
 void draw() {
