@@ -6,6 +6,7 @@ import controlP5.*;
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
 Table moves;
+Table specialMoves;
 
 //Creates the 3 pokemon
 Pokemon charizard;
@@ -15,6 +16,7 @@ Pokemon venusaur;
 void setup() {
     size(1200,900);
     moves = loadTable("Prokemon_Moves.csv");
+    specialMoves = loadTable("Prokemon_Special_Moves.csv");
 
     charizard = new Pokemon("Fire");
     charizard.assignMove("Ember", 1);
