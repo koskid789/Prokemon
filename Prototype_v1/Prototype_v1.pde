@@ -2,7 +2,7 @@
 //The following is a prototype for the Prokemon game that I will be developing along with Aiden Preza and Manit Sethi
 
 import controlP5.*;
-//Rows in the table are: Name, Type, PP, UB1, UB2, UB3, UB4, UB5
+//Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
 Table moves;
