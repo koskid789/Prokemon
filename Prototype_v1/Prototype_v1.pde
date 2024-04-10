@@ -2,7 +2,7 @@
 //The following is a prototype for the Prokemon game that I will be developing along with Aiden Preza and Manit Sethi
 
 import controlP5.*;
-//Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5
+//Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5, UB6, UB7, UB8, UB9, UB10
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
 Table moves;
@@ -66,7 +66,7 @@ class Move {
 
 int[] getMoveInfo(String name) {
     int count = 0;
-    int[] output = new int[8];
+    int[] output = new int[13];
     while (count < moves.getRowCount()) {
         if (name.equals(moves.getString(count, 0)) == true) {
             output[0] = moves.getInt(count, 1);
@@ -77,6 +77,11 @@ int[] getMoveInfo(String name) {
             output[5] = moves.getInt(count, 6);
             output[6] = moves.getInt(count, 7);
             output[7] = moves.getInt(count, 8);
+            output[8] = moves.getInt(count, 9);
+            output[9] = moves.getInt(count, 10);
+            output[10] = moves.getInt(count, 11);
+            output[11] = moves.getInt(count, 12);
+            output[12] = moves.getInt(count, 13);
         }
         count++;
     }
