@@ -10,15 +10,23 @@ Table moves;
 //Creates the 3 pokemon
 Pokemon charizard;
 Pokemon squirtle;
-Pokemon bulbasoar;
+Pokemon venusaur;
 
 void setup() {
+    size(1200,900);
     moves = loadTable("Prokemon_Moves.csv");
+
     charizard = new Pokemon("Fire");
     charizard.assignMove("Ember", 1);
     charizard.assignMove("Scratch", 1);
     charizard.assignMove("Growl", 1);
     charizard.assignMove("Flamethrower", 1);
+
+    venusaur = new Pokemon("Grass");
+    venusaur.assignMove("Petal_Dance", 1);
+    venusaur.assignMove("Tackle", 1);
+    venusaur.assignMove("Growl", 1);
+    venusaur.assignMove("Vine_Whip", 1);
 }
 
 void draw() {
