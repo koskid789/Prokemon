@@ -17,6 +17,7 @@ void setup() {
     charizard = new Pokemon("Fire");
     charizard.assignMove("Ember", 1);
     charizard.assignMove("Scratch", 1);
+    charizard.assignMove("Growl", 1);
 }
 
 void draw() {
