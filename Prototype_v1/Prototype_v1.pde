@@ -18,6 +18,7 @@ void setup() {
     charizard.assignMove("Ember", 1);
     charizard.assignMove("Scratch", 1);
     charizard.assignMove("Growl", 1);
+    charizard.assignMove("Flamethrower", 1);
 }
 
 void draw() {
