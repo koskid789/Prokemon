@@ -16,6 +16,7 @@ void setup() {
     moves = loadTable("Prokemon_Moves.csv");
     charizard = new Pokemon("Fire");
     charizard.assignMove("Ember", 1);
+    charizard.assignMove("Scratch", 1);
 }
 
 void draw() {
