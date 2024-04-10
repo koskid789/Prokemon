@@ -5,8 +5,8 @@ import controlP5.*;
 //Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5, UB6, UB7, UB8, UB9, UB10
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
-//For special moves, first row is attack, second is defence, third is spec-attack, fourth is spec-defence, fifth is speed
-//sixth is up(0)/down(1), seventh is self(0)/opponent(1), eighth is strength of change (1 being one stage, 2 being 2 stages, etc.)
+//For special moves, second row is attack, third is defence, fourth is spec-attack, fifth is spec-defence, sixth is speed
+//seventh is up(0)/down(1), eighth is self(0)/opponent(1), ninth is strength of change (1 being one stage, 2 being 2 stages, etc.)
 Table moves;
 Table specialMoves;
 
@@ -65,20 +65,45 @@ class Pokemon{
             case 1:
                 move1.assign(moveName);
                 break;
+            case 2:
+                move2.assign(moveName);
+                break;
+            case 3:
+                move3.assign(moveName);
+                break;
+            case 4:
+                move4.assign(moveName);
+                break;
         }
     }
 }
 
 class Move {
 
+    int[] info;
+    boolean specialMove = false;
+    int[] specialInfo;
 
     Move() {
-
+        specialInfo = new int[8]; 
     }
 
     void assign(String name) {
-        int[] info = getMoveInfo(name);
-        println(info);
+        specialMove = false;
+        info = getMoveInfo(name);
+        if (info[1] == 0) {
+            specialMove = true;
+            TableRow result = specialMoves.findRow(name, 0);
+            specialInfo[0] = result.getInt(1);
+            specialInfo[1] = result.getInt(2);
+            specialInfo[2] = result.getInt(3);
+            specialInfo[3] = result.getInt(4);
+            specialInfo[4] = result.getInt(5);
+            specialInfo[5] = result.getInt(6);
+            specialInfo[6] = result.getInt(7);
+            specialInfo[7] = result.getInt(8);
+        }
+        //println(info);
     }
 }
 
