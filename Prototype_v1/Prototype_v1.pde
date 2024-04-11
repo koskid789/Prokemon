@@ -248,4 +248,86 @@ class Attack {
     void change(int newValue) {
         baseStat = newValue;
     }
+
+    int return() {
+        return currentStat;
+    }
+}
+
+class Defence {
+
+    int baseStat;
+    int buffStage = 0;
+    float debuffStage = 0;
+    int currentStat;
+    int buffStat;
+    int debuffStat;
+    float buffAmount;
+    float debuffAmount;
+
+    Defence(int input) {
+        baseStat = input;
+    }
+
+    void buff(int magnitude) {
+        buffStage = buffStage + magnitude;
+        if (buffStage > 6) {
+            buffStage = 6;
+        }
+        switch (buffStage) {
+            case 1:
+                buffAmount = 1.5;
+                break;
+            case 2:
+                buffAmount = 2;
+                break;
+            case 3:
+                buffAmount = 2.5;
+                break;
+            case 4:
+                buffAmount = 3;
+                break;
+            case 5:
+                buffAmount = 3.5;
+                break;
+            case 6:
+                buffAmount = 4;
+                break;
+        }
+    }
+
+    void debuff(int magnitude) {
+        debuffStage = debuffStage + magnitude;
+        if (debuffStage > 6) {
+            debuffStage = 6;
+            switch (debuffStage) {
+            case 1:
+                debuffAmount = .666;
+                break;
+            case 2:
+                debuffAmount = .5;
+                break;
+            case 3:
+                debuffAmount = .4;
+                break;
+            case 4:
+                debuffAmount = .333;
+                break;
+            case 5:
+                debuffAmount = .285;
+                break;
+            case 6:
+                debuffAmount = .25;
+                break;
+        }
+        }
+    }
+
+    void change(int newValue) {
+        baseStat = newValue;
+    }
+
+    int return() {
+        return currentStat;
+    }
 }
