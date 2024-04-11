@@ -2,7 +2,7 @@
 //The following is a prototype for the Prokemon game that I will be developing along with Aiden Preza and Manit Sethi
 
 import controlP5.*;
-//Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5, UB6, UB7, UB8, UB9, UB10
+//Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5, UB6, UB7, UB8, UB9, UB10,type (physical, mental, etc.)
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
 //For special moves, second row is attack, third is defence, fourth is spec-attack, fifth is spec-defence, sixth is speed
@@ -100,7 +100,7 @@ class Move {
     boolean speed = false;
 
     Move() {
-        specialInfo = new int[8]; 
+        specialInfo = new int[9]; 
     }
 
     void assign(String name) {
@@ -118,13 +118,22 @@ class Move {
             specialInfo[6] = result.getInt(7);
             specialInfo[7] = result.getInt(8);
         }
-        //println(info);
+    }
+
+    int[] giveInfo() {
+        int[] output = new int[4];
+        if (specialMove == false) {
+            output[0] = 0;
+            output[1] = info[0];
+            output[2] = info[1];
+            output[3] = info[13];
+        }
     }
 }
 
 int[] getMoveInfo(String name) {
     int count = 0;
-    int[] output = new int[13];
+    int[] output = new int[14];
     while (count < moves.getRowCount()) {
         if (name.equals(moves.getString(count, 0)) == true) {
             output[0] = moves.getInt(count, 1);
@@ -140,6 +149,7 @@ int[] getMoveInfo(String name) {
             output[10] = moves.getInt(count, 11);
             output[11] = moves.getInt(count, 12);
             output[12] = moves.getInt(count, 13);
+            output[13] = moves.getInt(count,14);
         }
         count++;
     }
