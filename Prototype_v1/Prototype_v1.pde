@@ -60,6 +60,8 @@ class Pokemon{
     SpecDefence specDefence;
     Speed speed;
 
+    boolean unconscious = false;
+
     Pokemon(String typE) {
         attack = new Attack(100);
         type = typE;
@@ -344,7 +346,8 @@ class Defence {
 }
 
 class Health {
-
+    int totalHealth;
+    int currentHealth;
 
     Health() {
 
