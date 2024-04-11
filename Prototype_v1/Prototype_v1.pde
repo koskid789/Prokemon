@@ -259,7 +259,7 @@ class Attack {
         baseStat = newValue;
     }
 
-    int return() {
+    int returnStats() {
         return currentStat;
     }
 }
@@ -337,7 +337,7 @@ class Defence {
         baseStat = newValue;
     }
 
-    int return() {
+    int returnStats() {
         return currentStat;
     }
 }
