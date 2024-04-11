@@ -15,6 +15,8 @@ Pokemon charizard;
 Pokemon blastoise;
 Pokemon venusaur;
 
+Gui startScreen;
+
 void setup() {
     size(1200,900);
     moves = loadTable("Prokemon_Moves.csv");
@@ -140,5 +142,29 @@ int[] getMoveInfo(String name) {
 void keyPressed() {
     if (key == 'l') {
         exit();
+    }
+}
+
+class Gui {
+
+
+
+    Gui() {
+
+    }
+
+    void display() {
+
+    }
+}
+
+class Button {
+
+    float x;
+    float y;
+
+    Button(float cordsX, float cordsY) {
+        x = cordsX;
+        y = cordsY;
     }
 }
