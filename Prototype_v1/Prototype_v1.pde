@@ -349,8 +349,27 @@ class Health {
     int totalHealth;
     int currentHealth;
 
-    Health() {
+    Health(int value) {
+        totalHealth = value;
+    }
 
+    boolean checkState() {
+        boolean output = false;
+        if (currentHealth <= 0) {
+            output = true;
+        }
+        return output;
+    }
+
+    int checkHealth() {
+        return currentHealth;
+    }
+    
+    boolean canBeHealed() {
+        boolean output = false;
+        if (currentHealth < totalHealth) {
+            output = true;
+        }
     }
 }
 
