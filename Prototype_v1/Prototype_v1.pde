@@ -341,3 +341,35 @@ class Defence {
         return currentStat;
     }
 }
+
+class Health {
+
+
+    Health() {
+
+    }
+}
+
+class SpecAttack {
+
+
+    SpecAttack() {
+
+    }
+}
+
+class SpecDefence {
+
+
+    SpecDefence() {
+
+    }
+}
+
+class Speed {
+
+
+    Speed() {
+        
+    }
+}
