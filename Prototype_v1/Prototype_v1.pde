@@ -61,7 +61,7 @@ class Pokemon{
     Speed speed;
 
     Pokemon(String typE) {
-        attack = new Attak(100);
+        attack = new Attack(100);
         type = typE;
         move1 = new Move();
         move2 = new Move();
@@ -128,6 +128,7 @@ class Move {
             output[2] = info[1];
             output[3] = info[13];
         }
+        return output;
     }
 }
 
@@ -190,7 +191,7 @@ class Attack {
 
     int baseStat;
     int buffStage = 0;
-    float debuffStage = 0;
+    int debuffStage = 0;
     int currentStat;
     int buffStat;
     int debuffStat;
@@ -268,7 +269,7 @@ class Defence {
 
     int baseStat;
     int buffStage = 0;
-    float debuffStage = 0;
+    int debuffStage = 0;
     int currentStat;
     int buffStat;
     int debuffStat;
@@ -370,6 +371,6 @@ class Speed {
 
 
     Speed() {
-        
+
     }
 }
