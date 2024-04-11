@@ -5,8 +5,8 @@ import controlP5.*;
 //Rows in the table are: Name, Type, Power, PP, UB1, UB2, UB3, UB4, UB5, UB6, UB7, UB8, UB9, UB10,type (physical, mental, etc.)
 //Name will be a string
 //Type is an int, with 0-fire, 1-water, 2-grass, 3-flying, 4-normal
-//For special moves, second row is attack, third is defence, fourth is spec-attack, fifth is spec-defence, sixth is speed
-//seventh is up(0)/down(1), eighth is self(0)/opponent(1), ninth is strength of change (1 being one stage, 2 being 2 stages, etc.)
+//For special moves, second row is stat (0 - attack, 1 - defence, 2 - specattack, 3- specdefence, 4 - speed)
+//third is up(0)/down(1), fourth is self(0)/opponent(1), fifth is strength of change (1 being one stage, 2 being 2 stages, etc.)
 Table moves;
 Table specialMoves;
 
@@ -115,20 +115,32 @@ class Move {
             specialInfo[1] = result.getInt(2);
             specialInfo[2] = result.getInt(3);
             specialInfo[3] = result.getInt(4);
-            specialInfo[4] = result.getInt(5);
-            specialInfo[5] = result.getInt(6);
-            specialInfo[6] = result.getInt(7);
-            specialInfo[7] = result.getInt(8);
         }
     }
 
     int[] giveInfo() {
         int[] output = new int[4];
         if (specialMove == false) {
+            //Specifies the action the move takes. 0 = attack, 1 = buff, 2 = debuff, 3 = protect
             output[0] = 0;
+            //The elemental type that the move has
             output[1] = info[0];
+            //The power of the move
             output[2] = info[1];
+            //The damage type (physical, mental, etc.)
             output[3] = info[13];
+        }
+        else if (specialMove == true) {
+            switch(specialInfo[0]) {
+                case 0:
+                    output[0] = specialInfo[1] + 1;
+                    //elemental type
+                    output[1] = info[0];
+                    //Target self - 0, opponent - 1
+                    output[2] = specialInfo[2];
+                    //Stages of change
+                    output[3] = specialInfo[3];
+            }
         }
         return output;
     }
