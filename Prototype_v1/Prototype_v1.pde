@@ -370,29 +370,260 @@ class Health {
         if (currentHealth < totalHealth) {
             output = true;
         }
+        return output;
+    }
+    
+    int heal(int amountHealed) {
+        currentHealth = currentHealth + amountHealed;
+        if (currentHealth > totalHealth) {
+            currentHealth = totalHealth;
+        }
+        return currentHealth;
+    }
+    
+    int damage(int amountDamaged) {
+        currentHealth = currentHealth - amountDamaged;
+        if (currentHealth < 0) {
+            currentHealth = 0;
+        }
+        return currentHealth;
+    }
+
+    void increaseHealth(int amount) {
+        totalHealth = amount;
     }
 }
 
 class SpecAttack {
 
+    int baseStat;
+    int buffStage = 0;
+    int debuffStage = 0;
+    int currentStat;
+    int buffStat;
+    int debuffStat;
+    float buffAmount;
+    float debuffAmount;
 
-    SpecAttack() {
+    SpecAttack(int amount) {
+        baseStat = amount;
+    }
 
+    void buff(int magnitude) {
+        buffStage = buffStage + magnitude;
+        if (buffStage > 6) {
+            buffStage = 6;
+        }
+        switch (buffStage) {
+            case 1:
+                buffAmount = 1.5;
+                break;
+            case 2:
+                buffAmount = 2;
+                break;
+            case 3:
+                buffAmount = 2.5;
+                break;
+            case 4:
+                buffAmount = 3;
+                break;
+            case 5:
+                buffAmount = 3.5;
+                break;
+            case 6:
+                buffAmount = 4;
+                break;
+        }
+    }
+
+    void debuff(int magnitude) {
+        debuffStage = debuffStage + magnitude;
+        if (debuffStage > 6) {
+            debuffStage = 6;
+            switch (debuffStage) {
+            case 1:
+                debuffAmount = .666;
+                break;
+            case 2:
+                debuffAmount = .5;
+                break;
+            case 3:
+                debuffAmount = .4;
+                break;
+            case 4:
+                debuffAmount = .333;
+                break;
+            case 5:
+                debuffAmount = .285;
+                break;
+            case 6:
+                debuffAmount = .25;
+                break;
+        }
+        }
+    }
+
+    void change(int newValue) {
+        baseStat = newValue;
+    }
+
+    int returnStats() {
+        return currentStat;
     }
 }
 
 class SpecDefence {
-
+    
+    int baseStat;
+    int buffStage = 0;
+    int debuffStage = 0;
+    int currentStat;
+    int buffStat;
+    int debuffStat;
+    float buffAmount;
+    float debuffAmount;
 
     SpecDefence() {
 
+    }
+
+    void buff(int magnitude) {
+        buffStage = buffStage + magnitude;
+        if (buffStage > 6) {
+            buffStage = 6;
+        }
+        switch (buffStage) {
+            case 1:
+                buffAmount = 1.5;
+                break;
+            case 2:
+                buffAmount = 2;
+                break;
+            case 3:
+                buffAmount = 2.5;
+                break;
+            case 4:
+                buffAmount = 3;
+                break;
+            case 5:
+                buffAmount = 3.5;
+                break;
+            case 6:
+                buffAmount = 4;
+                break;
+        }
+    }
+
+    void debuff(int magnitude) {
+        debuffStage = debuffStage + magnitude;
+        if (debuffStage > 6) {
+            debuffStage = 6;
+            switch (debuffStage) {
+            case 1:
+                debuffAmount = .666;
+                break;
+            case 2:
+                debuffAmount = .5;
+                break;
+            case 3:
+                debuffAmount = .4;
+                break;
+            case 4:
+                debuffAmount = .333;
+                break;
+            case 5:
+                debuffAmount = .285;
+                break;
+            case 6:
+                debuffAmount = .25;
+                break;
+        }
+        }
+    }
+
+    void change(int newValue) {
+        baseStat = newValue;
+    }
+
+    int returnStats() {
+        return currentStat;
     }
 }
 
 class Speed {
 
+    int baseStat;
+    int buffStage = 0;
+    int debuffStage = 0;
+    int currentStat;
+    int buffStat;
+    int debuffStat;
+    float buffAmount;
+    float debuffAmount;
 
     Speed() {
 
+    }
+
+    void buff(int magnitude) {
+        buffStage = buffStage + magnitude;
+        if (buffStage > 6) {
+            buffStage = 6;
+        }
+        switch (buffStage) {
+            case 1:
+                buffAmount = 1.5;
+                break;
+            case 2:
+                buffAmount = 2;
+                break;
+            case 3:
+                buffAmount = 2.5;
+                break;
+            case 4:
+                buffAmount = 3;
+                break;
+            case 5:
+                buffAmount = 3.5;
+                break;
+            case 6:
+                buffAmount = 4;
+                break;
+        }
+    }
+
+    void debuff(int magnitude) {
+        debuffStage = debuffStage + magnitude;
+        if (debuffStage > 6) {
+            debuffStage = 6;
+            switch (debuffStage) {
+            case 1:
+                debuffAmount = .666;
+                break;
+            case 2:
+                debuffAmount = .5;
+                break;
+            case 3:
+                debuffAmount = .4;
+                break;
+            case 4:
+                debuffAmount = .333;
+                break;
+            case 5:
+                debuffAmount = .285;
+                break;
+            case 6:
+                debuffAmount = .25;
+                break;
+        }
+        }
+    }
+
+    void change(int newValue) {
+        baseStat = newValue;
+    }
+
+    int returnStats() {
+        return currentStat;
     }
 }
