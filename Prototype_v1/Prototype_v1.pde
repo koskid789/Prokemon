@@ -179,13 +179,13 @@ void keyPressed() {
 
 class Gui {
 
-
+    Button team;
 
     Gui() {
 
     }
 
-    void display() {
+    void displayStart() {
 
     }
 }
@@ -194,12 +194,22 @@ class Button {
 
     float x;
     float y;
+    float len;
+    float wid;
 
-    Button(float cordsX, float cordsY) {
+    Button(float cordsX, float cordsY, float lengtH, float widtH) {
         x = cordsX;
         y = cordsY;
+        len = lengtH;
+        wid = widtH;
+    }
+
+    float[] getValues() {
+        float[] output = {x,y,len,wid};
+        return output;
     }
 }
+
 
 class Attack {
 
