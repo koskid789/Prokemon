@@ -22,6 +22,8 @@ void setup() {
     moves = loadTable("Prokemon_Moves.csv");
     specialMoves = loadTable("Prokemon_Special_Moves.csv");
 
+    startScreen = new Gui();
+
     charizard = new Pokemon("Fire");
     charizard.assignMove("Ember", 1);
     charizard.assignMove("Scratch", 1);
@@ -180,9 +182,11 @@ void keyPressed() {
 class Gui {
 
     Button team;
+    color c = color(250,250,250);
 
     Gui() {
-
+        team = new Button(100,100,20,120,"Hello",c, 20);
+        team.display();
     }
 
     void displayStart() {
@@ -194,18 +198,43 @@ class Button {
 
     float x;
     float y;
-    float len;
+    float hei;
     float wid;
+    color fill;
+    String text;
+    float tX;
+    float tY;
+    int tSize;
 
-    Button(float cordsX, float cordsY, float lengtH, float widtH) {
+    Button(float cordsX, float cordsY, float heighT, float widtH, String texts, color fills, int size) {
         x = cordsX;
         y = cordsY;
-        len = lengtH;
+        hei = heighT;
         wid = widtH;
+        text = texts;
+        fill = fills;
+        tY = ((hei/2) + y);
+        tX = ((wid/2) + x);
+        tSize = size;
     }
 
-    float[] getValues() {
-        float[] output = {x,y,len,wid};
+    void display() {
+        fill(fill);
+        stroke(fill);
+        rect(x,y,wid,hei);
+        fill(0);
+        textAlign(CENTER,CENTER);
+        textSize(tSize);
+        text(text,tX, tY);
+    }
+
+    boolean mouseHover() {
+        boolean output = false;
+        if (mouseX >= x && mouseX <= x+wid) {
+            if (mouseY >= y && mouseY <= y+hei) {
+                output = true;
+            }
+        }
         return output;
     }
 }
