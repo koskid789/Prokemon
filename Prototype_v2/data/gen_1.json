@@ -12,7 +12,9 @@
     "abilities": "OVERGROW, NONE, CHLOROPHYLL",
     "speciesName": "Bulbasaur",
     "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
-    "learnsets": "BULBASAUR"
+    "learnsets": "BULBASAUR",
+    "evoLevel": 16,
+    "evoSpecies": "IVYSAUR"
   },
   {
     "species": "IVYSAUR",
@@ -27,7 +29,9 @@
     "abilities": "OVERGROW, NONE, CHLOROPHYLL",
     "speciesName": "Ivysaur",
     "description": "To support its bulb, Ivysaur's legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower.",
-    "learnsets": "IVYSAUR"
+    "learnsets": "IVYSAUR",
+    "evoLevel": 32,
+    "evoSpecies": "VENUSAUR"
   },
   {
     "species": "VENUSAUR",
@@ -57,7 +61,9 @@
     "abilities": "BLAZE, NONE, SOLAR_POWER",
     "speciesName": "Charmander",
     "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is happy, and blazes when it is enraged.",
-    "learnsets": "CHARMANDER"
+    "learnsets": "CHARMANDER",
+    "evoLevel": 16,
+    "evoSpecies": "CHARMELEON"
   },
   {
     "species": "CHARMELEON",
@@ -72,7 +78,9 @@
     "abilities": "BLAZE, NONE, SOLAR_POWER",
     "speciesName": "Charmeleon",
     "description": "Without pity, its sharp claws destroy foes. If it encounters a strong enemy, it becomes agitated, and the flame on its tail flares with a bluish white color.",
-    "learnsets": "CHARMELEON"
+    "learnsets": "CHARMELEON",
+    "evoLevel": 36,
+    "evoSpecies": "CHARIZARD"
   },
   {
     "species": "CHARIZARD",
@@ -102,7 +110,9 @@
     "abilities": "TORRENT, NONE, RAIN_DISH",
     "speciesName": "Squirtle",
     "description": "Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling Squirtle to swim at high speeds.",
-    "learnsets": "SQUIRTLE"
+    "learnsets": "SQUIRTLE",
+    "evoLevel": 16,
+    "evoSpecies": "WARTORTLE"
   },
   {
     "species": "WARTORTLE",
@@ -113,6 +123,27 @@
     "baseSpAttack": 69,
     "baseSpDefense": 80,
     "types": "WATER, WATER",
-    "genderRatio": 12.5
+    "genderRatio": 12.5,
+    "abilities": "TORRENT, NONE, RAIN_DISH",
+    "speciesName": "Wartortle",
+    "description": "Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this Pokémon's toughness in battle.",
+    "learnsets": "WARTORTLE",
+    "evoLevel": 36,
+    "evoSpecies": "BLASTOISE"
+  },
+  {
+    "species": "BLASTOISE",
+    "baseHP": 82,
+    "baseAttack": 83,
+    "baseDefense": 110,
+    "baseSpeed": 78,
+    "baseSpAttack": 85,
+    "baseSpDefense": 105,
+    "types": "WATER, WATER",
+    "genderRatio": 12.5,
+    "abilities": "TORRENT, NONE, RAIN_DISH",
+    "speciesName": "Blastoise",
+    "description": "The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.",
+    "learnsets": "BLASTOISE"
   }
 ]
