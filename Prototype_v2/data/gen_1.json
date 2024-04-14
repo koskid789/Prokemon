@@ -145,5 +145,23 @@
     "speciesName": "Blastoise",
     "description": "The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.",
     "learnsets": "BLASTOISE"
-  }
+  },
+  {
+    "species": "CATERPIE",
+    "baseHP": 55,
+    "baseAttack": 30,
+    "baseDefense": 49,
+    "baseSpeed": 45,
+    "baseSpAttack": 42,
+    "baseSpDefense": 52,
+    "types": "BUG, BUG",
+    "genderRatio": 50,
+    "abilities": "SHIELD_DUST, NONE, RUN_AWAY",
+    "speciesName": "Caterpie",
+    "description": "Its voracious appetite compels it to devour leaves bigger than itself without hesitation. It releases a terribly strong odor from its antennae.",
+    "learnsets": "CATERPIE",
+    "evoLevel": 7,
+    "evoSpecies": "METAPOD"
+  },
+  {}
 ]
