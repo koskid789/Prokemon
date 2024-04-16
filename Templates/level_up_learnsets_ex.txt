@@ -1,0 +1,10 @@
+This text file has the purpose of explaining the format used to store data in the level_up_learnsets.json file
+
+The "learnset" tag is used as the identifier for the JSONobject that stores the information.
+- The data inside is a string, all caps, that refers to the same string in the "learnset" tag that can be found in the gen_1.json file
+The following data uses the following structure:
+"level_up_()"
+-The brackets refers to the level at which the pokemon has the option to learn these moves.
+-For example:
+    - "level_up_10":
+    - This tag would contain the moves that this pokemon has the option to learn when it levels up to level 10.
