@@ -33,6 +33,18 @@
   },
   {
     "learnset": "VENUSAUR",
-    "level_up_1": "PETAL_DANCE, TACKLE, GROWL, LEECH_SEED, VINE_WHIP"
+    "level_up_1": "PETAL_DANCE, TACKLE, GROWL, LEECH_SEED, VINE_WHIP",
+    "level_up_3": "GROWL",
+    "level_up_7": "LEECH_SEED",
+    "level_up_13": "POISON_POWDER, SLEEP_POWDER",
+    "level_up_15": "TAKE_DOWN",
+    "level_up_20": "RAZOR_LEAF",
+    "level_up_23": "SWEET_SCENT",
+    "level_up_28": "GROWTH",
+    "level_up_31": "DOUBLE_EDGE",
+    "level_up_39": "WORRY_SEED",
+    "level_up_45": "SYNTHESIS",
+    "level_up_50": "PETAL_BLIZZARD",
+    "level_up_53": "SOLAR_BEAM"
   }
 ]
