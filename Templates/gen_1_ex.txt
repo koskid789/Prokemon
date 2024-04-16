@@ -1,0 +1,13 @@
+This text file has the purpose of explaining the save format of the gen_1.json file.
+The tag "species" contains the name of the species, spelt out in all caps.
+- This tag is used as the identifier when finding the block of data. 
+The "baseHP", "baseAttack", "baseDefense", "baseSpeed", "baseSpAttack", and "baseSpDefense", are obvious. They signify the base stats that they refer individually refer to.
+The "types" tag refers to a string that contains two types, in all caps, seperated by a comma and a space. These types refer to the type of the pokemon.
+The "genderRatio" tag contains an integer that refers tho the percentage that this pokemon will be female.
+The "abilities" tag contains a string that has abilities in it. Each of these names will be in all caps, and can be used to find the ability information in a seperate .json file.
+The "speciesName" tag contains a string that stores the display name of the pokemon.
+The "description" tag contains a string that stores the description of the pokemon.
+The "learnsets" tag contains a string that stores the name of the learnset in all caps. A learnset is the set of moves that the pokemon is allowed to use. 
+- This tag references the level_up_learnsets.json, egg_moves.json, and teachable_learnsets.json files. These files will have their own explenation text files.
+The "evoLevel" tag contains an integer that represents the level at which this pokemon evolves. (Is not included in final evolution pokemon.)
+The "evoSpecies" tag contains a string that represents the "species" tag of it's evolved form. (Is not included in final evolution pokemon.)

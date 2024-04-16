@@ -1,0 +1,17 @@
+{
+    "species": "WEEDLE",
+    "baseHP":        55,
+    "baseAttack":    ,
+    "baseDefense":   ,
+    "baseSpeed":     ,
+    "baseSpAttack":  ,
+    "baseSpDefense": ,
+    "types": "" ,
+    "genderRatio": ,
+    "abilities": "",
+    "speciesName": "",
+    "description": "",
+    "learnsets": "",
+    "evoLevel": ,
+    "evoSpecies": ""
+  },
