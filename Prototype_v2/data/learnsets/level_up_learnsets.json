@@ -46,5 +46,19 @@
     "level_up_45": "SYNTHESIS",
     "level_up_50": "PETAL_BLIZZARD",
     "level_up_53": "SOLAR_BEAM"
+  },
+  {
+    "learnset": "CHARMANDER",
+    "level_up_1": "SCRATCH, GROWL",
+    "level_up_7": "EMBER",
+    "level_up_10": "SMOKESCREEN",
+    "level_up_16": "DRAGON_RAGE",
+    "level_up_19": "SCARY_FACE",
+    "level_up_25": "FIRE_FANG",
+    "level_up_28": "FLAME_BURST",
+    "level_up_34": "SLASH",
+    "level_up_37": "FLAMETHROWER",
+    "level_up_43": "FIRE_SPIN",
+    "level_up_46": "INFERNO"
   }
 ]
